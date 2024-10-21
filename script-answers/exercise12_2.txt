@@ -1,0 +1,14 @@
+Script started on Thu Oct 10 17:28:32 2024
+Restored session: To 10 Lok 2024 17:14:42 EEST
+peksi@peksi-Air script-answers % docker run -it ubuntu bash
+root@0f8450497da0:/# mkdir /usr/src/app
+root@0f8450497da0:/# touch /usr/src/app/index.js
+root@0f8450497da0:/# exit
+exit
+peksi@peksi-Air script-answers % exit
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Thu Oct 10 17:29:14 2024

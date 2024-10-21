@@ -1,0 +1,18 @@
+Script started on Thu Oct 10 17:57:36 2024
+Restored session: To 10 Lok 2024 17:29:14 EEST
+peksi@peksi-Air script-answers % docker container ls -a    
+CONTAINER ID   IMAGE         COMMAND    CREATED             STATUS                         PORTS     NAMES
+0f8450497da0   ubuntu        "bash"     29 minutes ago      Exited (0) 37 seconds ago                dreamy_robinson
+ad319535450b   ubuntu        "bash"     46 minutes ago      Exited (0) 43 minutes ago                beautiful_albattani
+dc54a01597e6   hello-world   "/hello"   About an hour ago   Exited (0) About an hour ago             elated_mirzakhani
+peksi@peksi-Air script-answers % docker start -i dreamy_robinson
+root@0f8450497da0:/# nano /usr/src/app/index.js
+root@0f8450497da0:/# exit
+exit
+peksi@peksi-Air script-answers % exit
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Thu Oct 10 17:59:09 2024
