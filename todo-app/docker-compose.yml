@@ -47,6 +47,6 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
       - 8080:80
-    container_name: reverse-proxy-prod
+    container_name: reverse-proxy-todo
     depends_on:
       - todo-frontend # wait for the frontend container to be started

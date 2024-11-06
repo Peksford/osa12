@@ -1,0 +1,38 @@
+services:
+  blogapp-frontend:
+    # ...
+    image: blogapp-frontend
+    build:
+      context: ./frontend/
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend/:/usr/src/app
+      - /usr/src/app/node_modules
+    container_name: blogapp-frontend
+  debug-helper:
+    image: busybox
+  blogapp-backend:
+    image: blogapp-backend
+    build:
+      context: ./backend/
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend/:/usr/src/app
+      - /usr/src/app/node_modules
+    # environment:
+    #   - PORT=3003
+    # # ports:
+    # expose:
+    #   - "3003"
+    # ports:
+    #   - 3003:3003
+    container_name: blogapp-backend
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy-blogapp
+    depends_on:
+      - blogapp-frontend # wait for the frontend container to be started
